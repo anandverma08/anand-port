@@ -1,0 +1,101 @@
+<div class="box">
+  <div class="col-md-4 col-sm-12" style="margin-top: 1rem;">
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <img src="../../assets/img/download.png">
+        <h4 class="card-title marginTop16px">Anand Verma</h4>
+        <h6 class="card-subtitle mb-2" style="color: #673ab7;">Front End Javascript Developer</h6>
+        <p class="card-text">
+          <mat-chip-list>
+            <mat-chip color="primary" selected *ngFor="let skill of skills">{{skill}}</mat-chip>
+          </mat-chip-list>
+        </p>
+        <hr>
+        <div class="hideOnSmall">
+          <h5 class="mb-2" style="color: #673ab7;">Education</h5>
+          <ul>
+            <li *ngFor="let grad of gradDetails">
+              <h6 class="card-text">
+                {{grad}}
+              </h6>
+            </li>
+          </ul>
+          <hr>
+          <h5 class="mb-2" style="color: #673ab7;">Achievements/Rewards</h5>
+          <ul>
+            <li *ngFor="let ach of achievements">
+              <h6 class="card-text">
+                {{ach}}
+              </h6>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-12" style="margin-top: 1rem;">
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title marginTop16px" style="color: #673ab7;">Profile Summary</h5>
+        <h6 class="card-subtitle mb-2 text-muted" style="font-size: 18px;">Anand is a passionate and highly motivated individual, working as a Web Developer for Tata Consultancy Services for
+          more than two and a half years. At TCS, his responsibilities included designing web applications, adding features
+          to already existing applications, and migrating legacy applications to Cloud.</h6>
+        <hr>
+        <h5 class="card-title marginTop16px" style="color: #673ab7;">Skills</h5>
+        <div *ngFor="let skill of skillProgressBar">
+          <p class="card-text" style="margin-top: 8px">{{skill.skill}}</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="background-color: #673ab7"
+              [style.width]="skill.progress">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h5 class="card-title marginTop16px" style="color: #673ab7;">Work Experience</h5>
+        <h5 class="mb-2">Tata Consultany Services</h5>
+        <h6 class="mb-2">System Engineer : Sept 2019 - Present</h6>
+        <ul>
+          <li *ngFor="let task of systemEngineer">
+            <h6 class="card-text">
+              {{task}}
+            </h6>
+          </li>
+        </ul>
+        <br>
+        <h5 class="mb-2">Tata Consultany Services</h5>
+        <h6 class="mb-2">Assistant System Engineer : Sept 2017 - Sept 2019</h6>
+        <ul>
+          <li *ngFor="let task of assistantSystemEngineer">
+            <h6 class="card-text">
+              {{task}}
+            </h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-12 viewInSmall" style="margin-top: 1rem;">
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="mb-2" style="color: #673ab7;">Education</h5>
+        <ul>
+          <li *ngFor="let grad of gradDetails">
+            <h6 class="card-text">
+              {{grad}}
+            </h6>
+          </li>
+        </ul>
+        <hr>
+        <h5 class="mb-2" style="color: #673ab7;">Achievements/Rewards</h5>
+        <ul>
+          <li *ngFor="let ach of achievements">
+            <h6 class="card-text">
+              {{ach}}
+            </h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

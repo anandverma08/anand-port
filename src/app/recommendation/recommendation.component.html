@@ -1,0 +1,17 @@
+<button *ngIf="!editMode && !recommendationMadeOnce" class="button-rec" (click)="writeRecommendation()">Write Recommendation for Anand</button>
+<app-create-recommendation (recommendationAdded)="recommendationJustAdded($event)" *ngIf="editMode"></app-create-recommendation>
+<div class="card" style="width: 100%;" *ngFor="let rec of recommendations">
+  <div class="card-body">
+    <h5 class="card-title">{{rec.recommendationText}}</h5>
+    <div style="width: 80%;">
+      <h6 class="card-text text-muted">{{rec.relation}}</h6>
+    </div>
+    <div class="image-wrapper">
+      <img [src]="rec.photoURL">
+      <div class="helper-text">
+        <h6 class="card-subtitle mb-2 text-muted">{{rec.displayName}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">{{rec.company}}</h6>
+      </div>
+    </div>
+  </div>
+</div>

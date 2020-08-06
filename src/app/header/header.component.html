@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg">
+  <h4><a routerLink="/home">Portfolio : Anand Verma</a></h4>
+  <span class="spacer"></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navigationBar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse navigationBar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <h5><a class="nav-link" routerLink="" data-toggle="collapse" data-target=".navigationBar">Blogs</a></h5>
+      </li>
+      <li class="nav-item">
+       <h5><a class="nav-link" routerLink="/recommendation" data-toggle="collapse" data-target=".navigationBar">Recommendations</a></h5>
+      </li>
+      <li class="nav-item">
+        <h5><a *ngIf="!isLoggedIn"class="nav-link" routerLink="/login">Login</a></h5>
+        <h5 style="color: white" *ngIf="isLoggedIn" (click)="logOut()">Logout</h5>
+      </li>
+    </ul>
+  </div>
+</nav>

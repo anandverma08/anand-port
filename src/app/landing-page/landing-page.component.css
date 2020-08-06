@@ -1,0 +1,29 @@
+.box {
+  display: flex;
+
+}
+.viewInSmall{
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .box {
+    display: inline-block;
+  }
+  .hideOnSmall{
+    display: none;
+  }
+  .viewInSmall{
+    display: inline-block;
+  }
+ }
+
+img{
+  width: 100%;
+  border: 2px solid black;
+}
+
+.marginTop16px{
+  margin-top: 16px;
+
+}
