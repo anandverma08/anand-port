@@ -47,8 +47,6 @@ export class AuthService {
     this.afAuth.authState
       .subscribe(user => {
         if (user) {
-          console.log(user);
-
           this.isLoggedIn = true;
           this.userLoggedIn.next(true);
           this.userDetails.next(user);

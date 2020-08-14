@@ -18,13 +18,14 @@ export class RecommendationComponent implements OnInit {
   recommendations = [];
 
   ngOnInit(): void {
+    document.getElementById('navigationBar').style.display="none";
     this.recommendationService.getRecommendationsObj().subscribe((recommendations: [{}]) => {
-      this.recommendations = recommendations;
+      this.recommendations = recommendations.reverse();
     });
     this.user= this.authService.getUserDetailsObj();
     this.authService.getUserDetails().subscribe(user=>{
       this.user = user;
-      if(this.recommendations.find(res => res.displayName == this.user.displayName)){
+      if(this.recommendations.length && this.recommendations.find(res => res.displayName == this.user.displayName)){
         this.recommendationMadeOnce = true;
       }
     });
@@ -42,6 +43,4 @@ export class RecommendationComponent implements OnInit {
     this.recommendationMadeOnce = true;
     this.recommendations.unshift(event);
   }
-
-
 }

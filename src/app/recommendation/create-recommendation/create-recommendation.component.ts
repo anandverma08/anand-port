@@ -12,6 +12,7 @@ import { RecommendationService } from '../recommendation.service';
 export class CreateRecommendationComponent implements OnInit, OnDestroy {
   user;
   userDetailsSub: Subscription;
+  currentRole = "";
   @Output() recommendationAdded: EventEmitter<{}> = new EventEmitter<{}>();
   constructor(private authService: AuthService, private recommendationService: RecommendationService) { }
 
@@ -24,13 +25,17 @@ export class CreateRecommendationComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.userDetailsSub.unsubscribe();
   };
+  onProductChanged(name){
+    this.currentRole= name
+  }
   submit(form: NgForm) {
     let recommendation = {
       displayName: this.user.displayName,
       photoURL: this.user.photoURL,
       recommendationText: form.value.recommendationText,
-      relation: form.value.relation,
-      company: form.value.company
+      relation: this.currentRole,
+      company: form.value.company,
+      linkedIn : form.value.linkedIn
     };
     this.recommendationAdded.emit(recommendation);
     this.recommendationService.createRecommendation(recommendation);

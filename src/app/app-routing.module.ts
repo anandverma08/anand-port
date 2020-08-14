@@ -14,7 +14,6 @@ const routes: Routes = [{
 {
   path: 'recommendation', component: RecommendationComponent
 },
-
 {
   path: '', component: LandingPageComponent
 }]

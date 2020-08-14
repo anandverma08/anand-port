@@ -36,7 +36,8 @@ app.post('/api/recommendation', (req, res) => {
     photoURL: req.body.photoURL,
     recommendationText: req.body.recommendationText,
     relation: req.body.relation,
-    company: req.body.company
+    company: req.body.company,
+    linkedIn : req.body.linkedIn
   });
   recommendation.save().then(() => {
     res.status(201).json({

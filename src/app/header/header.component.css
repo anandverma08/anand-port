@@ -1,10 +1,11 @@
 .spacer {
   flex: 10;
 }
-a {
+a, li a {
   text-decoration: none;
   color: white;
 }
+
 .nav-link{
   color: white
 }
@@ -18,7 +19,8 @@ ul {
 
   .navbar{
     background-color: #673ab7;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-backface-visibility: hidden;
   }
 
   .navbar-toggler-icon {

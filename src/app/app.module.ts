@@ -8,6 +8,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from "@angular/material/expansion";
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +40,8 @@ import { CreateRecommendationComponent } from './recommendation/create-recommend
     MatChipsModule,
     MatCardModule,
     MatIconModule,
+    MatSidenavModule,
+    MatExpansionModule,
     AppFirebaseModule,
     BrowserAnimationsModule,
     HttpClientModule,

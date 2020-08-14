@@ -1,10 +1,10 @@
 <div class="box">
   <div class="col-md-4 col-sm-12" style="margin-top: 1rem;">
-    <div class="card" style="width: 100%;">
+    <div class="card" style="width: 100%; margin-bottom: 1rem">
       <div class="card-body">
         <img src="../../assets/img/download.png">
         <h4 class="card-title marginTop16px">Anand Verma</h4>
-        <h6 class="card-subtitle mb-2" style="color: #673ab7;">Front End Javascript Developer</h6>
+        <h6 class="card-subtitle mb-2 purple">Full Stack Javascript Developer</h6>
         <p class="card-text">
           <mat-chip-list>
             <mat-chip color="primary" selected *ngFor="let skill of skills">{{skill}}</mat-chip>
@@ -12,7 +12,7 @@
         </p>
         <hr>
         <div class="hideOnSmall">
-          <h5 class="mb-2" style="color: #673ab7;">Education</h5>
+          <h5 class="mb-2 purple">Education</h5>
           <ul>
             <li *ngFor="let grad of gradDetails">
               <h6 class="card-text">
@@ -21,12 +21,21 @@
             </li>
           </ul>
           <hr>
-          <h5 class="mb-2" style="color: #673ab7;">Achievements/Rewards</h5>
+          <h5 class="mb-2 purple">Achievements/Rewards</h5>
           <ul>
             <li *ngFor="let ach of achievements">
               <h6 class="card-text">
                 {{ach}}
               </h6>
+            </li>
+          </ul>
+          <h5 class="card-title purple">Reach Anand</h5>
+          <ul>
+            <li>
+              <a class="purple" href="https://github.com/anandverma08">Reach out to me on Github</a>
+            </li>
+            <li>
+              <a class="purple" href="https://www.linkedin.com/in/anandverma08/">Reach out to me on LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -37,12 +46,20 @@
   <div class="col-md-8 col-sm-12" style="margin-top: 1rem;">
     <div class="card" style="width: 100%;">
       <div class="card-body">
-        <h5 class="card-title marginTop16px" style="color: #673ab7;">Profile Summary</h5>
-        <h6 class="card-subtitle mb-2 text-muted" style="font-size: 18px;">Anand is a passionate and highly motivated individual, working as a Web Developer for Tata Consultancy Services for
-          more than two and a half years. At TCS, his responsibilities included designing web applications, adding features
-          to already existing applications, and migrating legacy applications to Cloud.</h6>
-        <hr>
-        <h5 class="card-title marginTop16px" style="color: #673ab7;">Skills</h5>
+        <h5 class="card-title marginTop16px purple">Professional Summary</h5>
+        <h6 class="card-text">
+          {{pSummary}}
+        </h6>
+        <h5 class="card-title marginTop16px purple">Key Strength</h5>
+        <ul>
+          <li *ngFor="let sum of summary">
+            <h6 class="card-text">
+              {{sum}}
+            </h6>
+          </li>
+        </ul>
+
+        <h5 class="card-title marginTop16px purple">Skills</h5>
         <div *ngFor="let skill of skillProgressBar">
           <p class="card-text" style="margin-top: 8px">{{skill.skill}}</p>
           <div class="progress">
@@ -51,8 +68,7 @@
             </div>
           </div>
         </div>
-        <hr>
-        <h5 class="card-title marginTop16px" style="color: #673ab7;">Work Experience</h5>
+        <h5 class="card-title marginTop16px purple">Work Experience</h5>
         <h5 class="mb-2">Tata Consultany Services</h5>
         <h6 class="mb-2">System Engineer : Sept 2019 - Present</h6>
         <ul>
@@ -75,10 +91,10 @@
       </div>
     </div>
   </div>
-  <div class="col-md-8 col-sm-12 viewInSmall" style="margin-top: 1rem;">
+  <div class="col-md-8 col-sm-12 viewInSmall" style="margin-top: 1rem; margin-bottom: 5rem;padding-bottom: 2rem">
     <div class="card" style="width: 100%;">
       <div class="card-body">
-        <h5 class="mb-2" style="color: #673ab7;">Education</h5>
+        <h5 class="mb-2 purple">Education</h5>
         <ul>
           <li *ngFor="let grad of gradDetails">
             <h6 class="card-text">
@@ -87,12 +103,22 @@
           </li>
         </ul>
         <hr>
-        <h5 class="mb-2" style="color: #673ab7;">Achievements/Rewards</h5>
+        <h5 class="mb-2 purple">Achievements/Rewards</h5>
         <ul>
           <li *ngFor="let ach of achievements">
             <h6 class="card-text">
               {{ach}}
             </h6>
+          </li>
+        </ul>
+
+        <h5 class="card-title purple">Reach Anand</h5>
+        <ul>
+          <li>
+            <a class="purple" href="https://github.com/anandverma08">Reach out to me on Github</a>
+          </li>
+          <li>
+            <a class="purple" href="https://www.linkedin.com/in/anandverma08/">Reach out to me on LinkedIn</a>
           </li>
         </ul>
       </div>

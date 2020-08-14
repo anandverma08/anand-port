@@ -9,7 +9,7 @@
     <div class="image-wrapper">
       <img [src]="rec.photoURL">
       <div class="helper-text">
-        <h6 class="card-subtitle mb-2 text-muted">{{rec.displayName}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted"><a [href]="rec.linkedIn">{{rec.displayName}}</a></h6>
         <h6 class="card-subtitle mb-2 text-muted">{{rec.company}}</h6>
       </div>
     </div>
