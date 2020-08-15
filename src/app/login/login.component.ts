@@ -34,10 +34,6 @@ export class LoginComponent implements OnInit {
     this.authServive.githubSignInViaRedirect();
   }
   ngOnInit(): void {
-    if(this.isLoggedIn){
-
-
-    }
   }
 
 }

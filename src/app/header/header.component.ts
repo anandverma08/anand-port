@@ -7,19 +7,17 @@ import { Subscription } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit , OnDestroy{
-  isLoggedIn :boolean = false;
-  authStatus : Subscription;
-  constructor(private authService: AuthService) {
-
-   }
+export class HeaderComponent implements OnInit, OnDestroy {
+  isLoggedIn: boolean = false;
+  authStatus: Subscription;
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    if(document.getElementById('navigationBar').style.display=="block"){
+    if (document.getElementById('navigationBar').style.display == "block") {
       document.getElementById('navigationBar').style.display = "none"
     }
     this.isLoggedIn = this.authService.getAuthState();
-    this.authStatus = this.authService.getLoginStatus().subscribe(status=>{
+    this.authStatus = this.authService.getLoginStatus().subscribe(status => {
       this.isLoggedIn = status;
     })
   }
@@ -27,13 +25,13 @@ export class HeaderComponent implements OnInit , OnDestroy{
     this.authStatus.unsubscribe();
   }
 
-  logOut(){
+  logOut() {
     this.authService.logout();
   }
-  toggleButton(){
-    if(document.getElementById('navigationBar').style.display=="none" || document.getElementById('navigationBar').style.display==""){
+  toggleButton() {
+    if (document.getElementById('navigationBar').style.display == "none" || document.getElementById('navigationBar').style.display == "") {
       document.getElementById('navigationBar').style.display = "block";
-    }else if(document.getElementById('navigationBar').style.display == "block"){
+    } else if (document.getElementById('navigationBar').style.display == "block") {
       document.getElementById('navigationBar').style.display = ""
     }
   }
