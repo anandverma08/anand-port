@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 export class RecommendationService {
   recommendations = [];
   recommendationStatus = new Subject();
-  url = "http://portfolio-env.eba-cxpzemm9.ap-south-1.elasticbeanstalk.com/api/recommendation";
+  url = "https://us-central1-anandport-5df88.cloudfunctions.net/app/api/recommendation";
   constructor(private http: HttpClient) { }
 
   createRecommendation(recommendation) {

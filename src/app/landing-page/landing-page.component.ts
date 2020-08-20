@@ -67,15 +67,16 @@ export class LandingPageComponent implements OnInit {
     "Strong foundation in JavaScript along with Angular and VueJS",
     "Well familiar with web technologies and standards to deliver the best experiences across web and mobile devices",
     "Extensively worked on developing and consuming REST services",
-    "Good knowledge in building, testing and deploying scalable, accessible and modular software products",
-    "Good understanding of MVC, MVVM design patterns"
+    "Good knowledge in building, testing and deploying scalable, accessible and modular software products with MVC, MVVM design patterns",
+    "Experience of developing code as per Web Accessibility guidelines",
+    "Good understanding of Data Structures like Linked Lists, Binary Search Tree, Graph etc."
   ]
-  pSummary = "Anand is a full stack JavaScript developer with 3 years of industry experience having out of the box thinking to provide web-based solutions and specialises in front end development using modern JavaScript frameworks. He is looking for a full stack developer role."
+  pSummary = "Anand is a front end JavaScript developer with 3 years of industry experience having out of the box thinking to provide web-based solutions and specialises in front end development using modern JavaScript frameworks. He is looking for a full stack developer role."
   constructor() {
   }
 
   ngOnInit(): void {
-    if(document.getElementById('navigationBar').style.display=="block"){
+    if (document.getElementById('navigationBar').style.display == "block") {
       document.getElementById('navigationBar').style.display = ""
     }
   }

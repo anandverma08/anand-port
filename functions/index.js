@@ -1,10 +1,27 @@
+const functions = require('firebase-functions');
 
 const express = require('express');
 const app = express();
+const port=3000;
+
+app.listen(port,()=>{
+  console.log("listening on port..")
+})
+
+
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const Recommendation = require('./models/recommendation');
 
+const recommendationSchema = mongoose.Schema({
+  displayName: { type: String, required: true },
+  photoURL: { type: String, required: true },
+  recommendationText: { type: String, required: true },
+  relation: { type: String, required: true },
+  company: { type: String, required: true },
+  linkedIn : { type: String, required: true }
+});
+
+const Recommendation = mongoose.model('Recommendation',recommendationSchema);
 
 const url = "mongodb+srv://Anand:anandPort@anandport.gszay.mongodb.net/anandPort?retryWrites=true&w=majority";
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -56,4 +73,6 @@ app.get('/api/recommendation', (req, res) => {
 
 });
 
-module.exports = app;
+
+
+exports.app = functions.https.onRequest(app);
